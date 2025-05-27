@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookTrack - Simple Book Management</title>
+    <link rel="stylesheet" href="labExam.css">
+    <!-- Added Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="logo"><i class="fas fa-book-open"></i> BookTrack</div>
+
+        <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#dashboard" class="nav-link"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="#my-books" class="nav-link"><i class="fas fa-books"></i> My Books</a></li>
+                <li class="nav-item"><a href="#add-book" class="nav-link"><i class="fas fa-plus-circle"></i> Add Book</a></li>
+                <li class="nav-item"><a href="#statistics" class="nav-link"><i class="fas fa-chart-bar"></i> Statistics</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="dashboard" aria-labelledby="dashboard-title">
+            <h1 id="dashboard-title"><i class="fas fa-tachometer-alt"></i> My Reading Dashboard</h1>
+            <p>Track your reading progress, manage your collection, and discover new books to read.</p>
+
+            <div class="carousel" aria-label="Reading now">
+                <div class="carousel-inner">
+                    <div class="carousel-item" aria-hidden="false">
+                        <div class="book-cover">
+                            <img src="assets/images/The Midnight Library.jpg" alt="The Midnight Library book cover" class="book-image">
+                        </div>
+                        <h2><i class="fas fa-book-reader"></i> Currently Reading</h2>
+                        <h3>The Midnight Library</h3>
+                        <p class="book-info">By Matt Haig | 304 pages | Fiction</p>
+                        <p><i class="fas fa-bookmark"></i> Progress: 45% (Page 136 of 304)</p>
+                        <div class="book-actions">
+                            <button class="btn"><i class="fas fa-edit"></i> Update Progress</button>
+                            <button class="btn"><i class="fas fa-check-circle"></i> Mark as Read</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item" aria-hidden="true">
+                        <div class="book-cover">
+                            <img src="assets/images/Project Hail Mary.jpg" alt="Project Hail Mary book cover" class="book-image">
+                        </div>
+                        <h2><i class="fas fa-list"></i> Next on Your List</h2>
+                        <h3>Project Hail Mary</h3>
+                        <p class="book-info">By Andy Weir | 496 pages | Science Fiction</p>
+                        <p><i class="fas fa-hourglass-start"></i> Status: On shelf, ready to start</p>
+                        <div class="book-actions">
+                            <button class="btn"><i class="fas fa-play"></i> Start Reading</button>
+                            <button class="btn"><i class="fas fa-trash-alt"></i> Remove from List</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control carousel-prev" aria-label="Previous item"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-control carousel-next" aria-label="Next item"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="my-books" aria-labelledby="books-title">
+            <h2 id="books-title"><i class="fas fa-book"></i> My Book Collection</h2>
+            <p>You have 24 books in your collection, with 12 read and 12 to read.</p>
+
+            <div class="table-container">
+                <table aria-label="Book collection">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Genre</th>
+                            <th scope="col">Pages</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Rating</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Midnight Library</td>
+                            <td>Matt Haig</td>
+                            <td><i class="fas fa-book"></i> Fiction</td>
+                            <td>304</td>
+                            <td><i class="fas fa-spinner"></i> Reading (45%)</td>
+                            <td>-</td>
+                            <td><button class="btn"><i class="fas fa-edit"></i> Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Project Hail Mary</td>
+                            <td>Andy Weir</td>
+                            <td><i class="fas fa-rocket"></i> Science Fiction</td>
+                            <td>496</td>
+                            <td><i class="fas fa-clock"></i> To Read</td>
+                            <td>-</td>
+                            <td><button class="btn"><i class="fas fa-edit"></i> Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Dune</td>
+                            <td>Frank Herbert</td>
+                            <td><i class="fas fa-rocket"></i> Science Fiction</td>
+                            <td>412</td>
+                            <td><i class="fas fa-check-circle"></i> Read</td>
+                            <td>★★★★☆</td>
+                            <td><button class="btn"><i class="fas fa-edit"></i> Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Song of Achilles</td>
+                            <td>Madeline Miller</td>
+                            <td><i class="fas fa-history"></i> Historical Fiction</td>
+                            <td>352</td>
+                            <td><i class="fas fa-check-circle"></i> Read</td>
+                            <td>★★★★★</td>
+                            <td><button class="btn"><i class="fas fa-edit"></i> Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Educated</td>
+                            <td>Tara Westover</td>
+                            <td><i class="fas fa-user"></i> Memoir</td>
+                            <td>334</td>
+                            <td><i class="fas fa-check-circle"></i> Read</td>
+                            <td>★★★★☆</td>
+                            <td><button class="btn"><i class="fas fa-edit"></i> Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Atomic Habits</td>
+                            <td>James Clear</td>
+                            <td><i class="fas fa-brain"></i> Self-Help</td>
+                            <td>320</td>
+                            <td><i class="fas fa-clock"></i> To Read</td>
+                            <td>-</td>
+                            <td><button class="btn"><i class="fas fa-edit"></i> Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="add-book" aria-labelledby="add-book-title">
+            <h2 id="add-book-title"><i class="fas fa-plus-circle"></i> Add New Book</h2>
+            <p>Add a new book to your collection by filling out the form below.</p>
+
+            <div class="add-book-container">
+                <div class="book-image-upload">
+                    <img src="assets/images/Book cover.png" alt="Book cover placeholder" class="book-placeholder">
+                    <button class="btn upload-btn"><i class="fas fa-upload"></i> Upload Cover</button>
+                </div>
+
+                <form aria-label="Add book form">
+                    <div class="form-group">
+                        <label for="title"><i class="fas fa-heading"></i> Book Title</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author"><i class="fas fa-user-edit"></i> Author</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre"><i class="fas fa-tags"></i> Genre</label>
+                        <select id="genre" name="genre">
+                            <option value="">Select Genre</option>
+                            <option value="fiction">Fiction</option>
+                            <option value="non-fiction">Non-Fiction</option>
+                            <option value="sci-fi">Science Fiction</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="mystery">Mystery</option>
+                            <option value="biography">Biography</option>
+                            <option value="history">History</option>
+                            <option value="self-help">Self-Help</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pages"><i class="fas fa-file-alt"></i> Number of Pages</label>
+                        <input type="number" id="pages" name="pages" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status"><i class="fas fa-bookmark"></i> Status</label>
+                        <select id="status" name="status">
+                            <option value="to-read">To Read</option>
+                            <option value="reading">Currently Reading</option>
+                            <option value="read">Finished Reading</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes"><i class="fas fa-sticky-note"></i> Notes</label>
+                        <textarea id="notes" name="notes" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn"><i class="fas fa-plus"></i> Add Book</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="statistics" aria-labelledby="stats-title">
+            <h2 id="stats-title"><i class="fas fa-chart-pie"></i> Reading Statistics</h2>
+            <p>View your reading progress and habits.</p>
+
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="card-icon"><i class="fas fa-tasks fa-3x"></i></div>
+                    <h3>Reading Progress</h3>
+                    <p><i class="fas fa-book-reader"></i> Books read this year: 12</p>
+                    <p><i class="fas fa-file-alt"></i> Pages read: 3,864</p>
+                    <p><i class="fas fa-bullseye"></i> Goal completion: 60% (12/20 books)</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="card-icon"><i class="fas fa-chart-pie fa-3x"></i></div>
+                    <h3>Genre Breakdown</h3>
+                    <p><i class="fas fa-book"></i> Fiction: 8 books</p>
+                    <p><i class="fas fa-glasses"></i> Non-Fiction: 4 books</p>
+                    <p><i class="fas fa-rocket"></i> Science Fiction: 6 books</p>
+                    <p><i class="fas fa-dragon"></i> Fantasy: 3 books</p>
+                    <p><i class="fas fa-question-circle"></i> Other: 3 books</p>
+                    <img src="/api/placeholder/300/150" alt="Genre breakdown chart" class="chart-image">
+                </div>
+
+                <div class="book-card">
+                    <div class="card-icon"><i class="fas fa-calendar-check fa-3x"></i></div>
+                    <h3>Reading Streaks</h3>
+                    <p><i class="fas fa-fire"></i> Current streak: 14 days</p>
+                    <p><i class="fas fa-trophy"></i> Longest streak: 30 days</p>
+                    <p><i class="fas fa-clock"></i> Average reading time: 32 minutes/day</p>
+                    <img src="/api/placeholder/300/150" alt="Reading streak chart" class="chart-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-book-open fa-2x"></i>
+                <p>BookTrack</p>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fas fa-user-circle"></i> Account</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                <a href="#"><i class="fas fa-info-circle"></i> About</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2025 BookTrack - Simple Book Management</p>
+    </footer>
+
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="labExam.js"></script>
+</body>
+</html>
